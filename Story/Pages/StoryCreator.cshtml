@@ -1,0 +1,37 @@
+﻿@page
+@model Story.Pages.StoryCreatorModel
+@{
+}
+
+<h1>Create</h1>
+
+<h4>Story</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Story.Stype" class="control-label"></label>
+                <select asp-for="Story.Stype" class="form-control" asp-items="ViewBag.Stype"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Story.Header" class="control-label"></label>
+                <input asp-for="Story.Header" class="form-control" />
+                <span asp-validation-for="Story.Header" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Story.Body" class="control-label"></label>
+                <input asp-for="Story.Body" class="form-control" />
+                <span asp-validation-for="Story.Body" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
